@@ -16,3 +16,6 @@ for ip in `seq 1 254`; do
  ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
 done
 fi
+
+# Run nmap for previous script
+# for ip in $(cat ips.txt); do nmap -sV -sC -Pn -T4 -p- -oN $ip.nmap $ip; done
